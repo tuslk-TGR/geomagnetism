@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
+  const [heading, setHeading] = useState();
+  const [pitch, setPitch] = useState();
+  const [roll, setRoll] = useState();
+
+  useEffect(() => {
+    function handleDeviceOrientation(event: any) {
+      setHeading(event.alpha);
+      setPitch(event.beta);
+      setRoll(event.gamma);
+    }
+
+    window.addEventListener('deviceorientation', handleDeviceOrientation);
+    return () => window.removeEventListener('deviceorientation', handleDeviceOrientation);
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>Heading: {heading}</div>
+      <div>Pitch: {pitch}</div>
+      <div>Roll: {roll}</div>
     </div>
   );
 }
