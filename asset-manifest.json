@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/geomagnetism/static/js/main.e1d516ab.js",
+    "main.js": "/geomagnetism/static/js/main.273074ad.js",
     "static/js/787.d8ff2454.chunk.js": "/geomagnetism/static/js/787.d8ff2454.chunk.js",
     "index.html": "/geomagnetism/index.html",
-    "main.e1d516ab.js.map": "/geomagnetism/static/js/main.e1d516ab.js.map",
+    "main.273074ad.js.map": "/geomagnetism/static/js/main.273074ad.js.map",
     "787.d8ff2454.chunk.js.map": "/geomagnetism/static/js/787.d8ff2454.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.e1d516ab.js"
+    "static/js/main.273074ad.js"
   ]
 }
